@@ -5,8 +5,8 @@ import kodlamaio.northwind.business.requests.employeeRequests.DeleteEmployeeRequ
 import kodlamaio.northwind.business.requests.employeeRequests.UpdateEmployeeRequest;
 import kodlamaio.northwind.business.responses.employees.ListEmployeeResponse;
 import kodlamaio.northwind.business.responses.employees.ReadEmployeeResponse;
-import kodlamaio.northwind.business.core.utilities.Results.DataResult;
-import kodlamaio.northwind.business.core.utilities.Results.Result;
+import kodlamaio.northwind.core.utilities.Results.DataResult;
+import kodlamaio.northwind.core.utilities.Results.Result;
 
 import java.util.List;
 

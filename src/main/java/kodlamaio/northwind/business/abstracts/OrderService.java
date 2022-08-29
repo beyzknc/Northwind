@@ -5,8 +5,8 @@ import kodlamaio.northwind.business.requests.orderRequests.DeleteOrderRequest;
 import kodlamaio.northwind.business.requests.orderRequests.UpdateOrderRequest;
 import kodlamaio.northwind.business.responses.orders.ListOrderResponse;
 import kodlamaio.northwind.business.responses.orders.ReadOrderResponse;
-import kodlamaio.northwind.business.core.utilities.Results.DataResult;
-import kodlamaio.northwind.business.core.utilities.Results.Result;
+import kodlamaio.northwind.core.utilities.Results.DataResult;
+import kodlamaio.northwind.core.utilities.Results.Result;
 
 import java.util.List;
 

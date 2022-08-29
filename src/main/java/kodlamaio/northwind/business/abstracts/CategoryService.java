@@ -5,8 +5,8 @@ import kodlamaio.northwind.business.requests.categoryRequests.DeleteCategoryRequ
 import kodlamaio.northwind.business.requests.categoryRequests.UpdateCategoryRequest;
 import kodlamaio.northwind.business.responses.categories.ListCategoryResponse;
 import kodlamaio.northwind.business.responses.categories.ReadCategoryResponse;
-import kodlamaio.northwind.business.core.utilities.Results.DataResult;
-import kodlamaio.northwind.business.core.utilities.Results.Result;
+import kodlamaio.northwind.core.utilities.Results.DataResult;
+import kodlamaio.northwind.core.utilities.Results.Result;
 
 import java.util.List;
 

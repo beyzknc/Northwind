@@ -5,8 +5,8 @@ import kodlamaio.northwind.business.requests.productRequests.DeleteProductReques
 import kodlamaio.northwind.business.requests.productRequests.UpdateProductRequest;
 import kodlamaio.northwind.business.responses.products.ListProductResponse;
 import kodlamaio.northwind.business.responses.products.ReadProductResponse;
-import kodlamaio.northwind.business.core.utilities.Results.DataResult;
-import kodlamaio.northwind.business.core.utilities.Results.Result;
+import kodlamaio.northwind.core.utilities.Results.DataResult;
+import kodlamaio.northwind.core.utilities.Results.Result;
 
 import java.util.List;
 
