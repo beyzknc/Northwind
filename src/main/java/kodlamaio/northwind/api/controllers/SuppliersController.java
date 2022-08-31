@@ -23,8 +23,6 @@ public class SuppliersController {
         this.supplierService = supplierService;
     }
 
-
-
     @PostMapping("/add")
     public Result add(@RequestBody @Valid CreateSupplierRequest createSupplierRequest){
         return  this.supplierService.add(createSupplierRequest);
