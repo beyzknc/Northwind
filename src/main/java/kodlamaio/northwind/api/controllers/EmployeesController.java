@@ -18,42 +18,34 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeesController {
     private EmployeeService employeeService;
-
     @Autowired
     public EmployeesController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
-
     @GetMapping("/getall")
     public DataResult<List<ListEmployeeResponse>> getAll(){
         return this.employeeService.getAll();
     }
-
     @PostMapping("/add")
     public Result add(@RequestBody @Valid CreateEmployeeRequest createEmployeeRequest){
         return this.employeeService.add(createEmployeeRequest);
     }
-
     @PostMapping("/update")
     public Result update(@RequestBody @Valid UpdateEmployeeRequest updateEmployeeRequest){
         return this.employeeService.update(updateEmployeeRequest);
     }
-
     @DeleteMapping("/delete")
     public Result delete(@Valid DeleteEmployeeRequest deleteEmployeeRequest){
         return   this.employeeService.delete(deleteEmployeeRequest);
     }
-
     @GetMapping("/getbyid")
     public DataResult<ReadEmployeeResponse> getById(int  employeeId){
         return this.employeeService.getById(employeeId);
     }
-
     @GetMapping("/getAllByPage")
     public DataResult<List<ListEmployeeResponse>> GetAll(@RequestParam int pageNo, int pageSize) {
         return employeeService.getAll(pageNo, pageSize);
     }
-
     @GetMapping("/getAllByPageWithField")
     public DataResult<List<ListEmployeeResponse>> GetAll(@RequestParam int pageNo, int pageSize,String field) {
         return employeeService.getAll(pageNo, pageSize,field);

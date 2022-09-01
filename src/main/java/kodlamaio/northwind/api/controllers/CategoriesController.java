@@ -18,7 +18,6 @@ import java.util.List;
 @RequestMapping("/api/categories")
 public class CategoriesController {
     private CategoryService categoryService;
-
     @Autowired
     public CategoriesController(CategoryService categoryService) {
         this.categoryService = categoryService;
@@ -29,32 +28,26 @@ public class CategoriesController {
         return this.categoryService.getAll();
     }
 
-
     @PostMapping("/add")
     public Result add(@RequestBody @Valid CreateCategoryRequest createCategoryRequest){
       return  this.categoryService.add(createCategoryRequest);
     }
-
     @PostMapping("/update")
     public Result update(@RequestBody @Valid UpdateCategoryRequest updateCategoryRequest){
         return  this.categoryService.update(updateCategoryRequest);
     }
-
     @DeleteMapping("/delete")
     public Result delete(@Valid DeleteCategoryRequest deleteCategoryRequest){
         return this.categoryService.delete(deleteCategoryRequest);
     }
-
     @GetMapping("/getbyid")
     public DataResult<ReadCategoryResponse> getById( int  categoryId){
         return this.categoryService.getById(categoryId);
     }
-
     @GetMapping("/getAllByPage")
     public DataResult<List<ListCategoryResponse>> GetAll(@RequestParam int pageNo, int pageSize) {
         return categoryService.getAll(pageNo, pageSize);
     }
-
     @GetMapping("/getAllByPageWithField")
     public DataResult<List<ListCategoryResponse>> GetAll(@RequestParam int pageNo, int pageSize,String field) {
         return categoryService.getAll(pageNo, pageSize,field);

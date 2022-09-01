@@ -19,17 +19,14 @@ import java.util.List;
 public class ProductsController {
     @Autowired
     private ProductService productService;
-
     @PostMapping("/add")
     public Result add(@RequestBody @Valid CreateProductRequest createProductRequest){
         return this.productService.add(createProductRequest);
     }
-
     @PostMapping("/update")
     public Result update(@RequestBody @Valid UpdateProductRequest updateProductRequest){
         return this.productService.update(updateProductRequest);
     }
-
     @DeleteMapping("/delete")
     public Result delete(@Valid DeleteProductRequest deleteProductRequest){
         return this.productService.delete(deleteProductRequest);
@@ -38,17 +35,14 @@ public class ProductsController {
     public DataResult<List<ListProductResponse>> getAll(){
         return this.productService.getAll();
     }
-
     @GetMapping("/getbyid")
     public DataResult<ReadProductResponse> getById( int productId){
         return this.productService.getById(productId);
     }
-
     @GetMapping("/getAllByPage")
     public DataResult<List<ListProductResponse>> GetAll(@RequestParam int pageNo, int pageSize) {
         return productService.getAll(pageNo, pageSize);
     }
-
     @GetMapping("/getAllByPageWithField")
     public DataResult<List<ListProductResponse>>  GetAll(@RequestParam int pageNo, int pageSize,String field) {
         return productService.getAll(pageNo, pageSize,field);

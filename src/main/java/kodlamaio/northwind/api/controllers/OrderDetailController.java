@@ -18,22 +18,18 @@ import java.util.List;
 @RequestMapping("/api/orderDetails")
 public class OrderDetailController {
     private OrderDetailService orderDetailService;
-
     @Autowired
     public OrderDetailController(OrderDetailService orderDetailService) {
         this.orderDetailService = orderDetailService;
     }
-
     @PostMapping("/add")
     public Result add(@RequestBody @Valid CreateOrderDetailRequest createOrderDetailRequest){
         return  this.orderDetailService.add(createOrderDetailRequest);
     }
-
     @PostMapping("/update")
     public Result update(@RequestBody @Valid UpdateOrderDetailRequest updateOrderDetailRequest){
         return this.orderDetailService.update(updateOrderDetailRequest);
     }
-
     @DeleteMapping("/delete")
     public Result delete(@Valid DeleteOrderDetailRequest deleteOrderDetailRequest){
         return this.orderDetailService.delete(deleteOrderDetailRequest);
@@ -47,7 +43,6 @@ public class OrderDetailController {
     public DataResult<ReadOrderDetailResponse> getById(int orderId, int productId){
         return this.orderDetailService.getById(orderId,productId);
     }
-
     @GetMapping("/getAllByPage")
     public DataResult<List<ListOrderDetailResponse>> GetAll(@RequestParam int pageNo, int pageSize) {
         return orderDetailService.getAll(pageNo, pageSize);
